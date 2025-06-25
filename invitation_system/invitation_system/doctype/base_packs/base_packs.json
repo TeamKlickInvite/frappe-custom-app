@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2025-06-10 14:56:59.885493",
  "doctype": "DocType",
@@ -48,13 +47,14 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
+   "options": "BP-.YYYY.-.####",
    "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-10 15:18:23.574140",
+ "modified": "2025-06-25 17:35:04.151130",
  "modified_by": "Administrator",
  "module": "Invitation System",
  "name": "Base Packs",

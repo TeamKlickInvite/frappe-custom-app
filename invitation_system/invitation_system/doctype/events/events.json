@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2025-06-11 11:32:39.012028",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,6 +12,7 @@
   "start_date",
   "end_date",
   "venue_address",
+  "naming_series",
   "event_type_details_section",
   "wedding_details",
   "birthday_details",
@@ -65,41 +67,48 @@
    "label": "Event Type Details"
   },
   {
-   "depends_on": "eval:doc.type == 'Wedding'",
+   "depends_on": "eval:doc.event_type == 'Wedding'",
    "fieldname": "wedding_details",
    "fieldtype": "Table",
    "label": "Wedding Details",
    "options": "Event Wedding Details"
   },
   {
-   "depends_on": "eval:doc.type == 'Birthday'",
+   "depends_on": "eval:doc.event_type == 'Birthday'",
    "fieldname": "birthday_details",
    "fieldtype": "Table",
    "label": "Birthday Details",
    "options": "Event Birthday Details"
   },
   {
-   "depends_on": "eval:doc.type == 'Anniversary'",
+   "depends_on": "eval:doc.event_type == 'Anniversary'",
    "fieldname": "anniversary_details",
    "fieldtype": "Table",
    "label": "Anniversary Details",
    "options": "Event Anniversary Details"
   },
   {
-   "depends_on": "eval:doc.type == 'Other'",
+   "depends_on": "eval:doc.event_type == 'Other'",
    "fieldname": "other_details",
    "fieldtype": "Table",
    "label": "Other Details",
    "options": "Event Other Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "EVT-.####"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-11 12:06:47.599864",
+ "modified": "2025-06-25 17:36:02.703174",
  "modified_by": "Administrator",
  "module": "Invitation System",
  "name": "Events",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

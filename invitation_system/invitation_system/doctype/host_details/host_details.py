@@ -1,30 +1,33 @@
-# invitation_system/invitation_system/doctype/host_details/host_details.py
+# frappe-bench/apps/invitation_system/invitation_system/doctype/host_details/host_details.py
+
 import frappe
 from frappe.model.document import Document
 
 class HostDetails(Document):
     def before_insert(self):
         """
-        This hook handles the creation/re-activation of a User when a new Host Details record is created.
-        It now also syncs the mobile number.
+        Handles the creation/re-activation of a User when a new Host Details record is created.
+        It also syncs the mobile number to the User doctype.
         """
+        # 1. Block creation if an active host profile already exists.
         if frappe.db.exists("Host Details", self.email):
             frappe.throw(
                 f"An active host profile with the email '{self.email}' already exists. Please log in or use 'Forgot Password'.",
                 title="Profile Exists"
             )
 
+        # 2. Set the owner of this new Host Details document to the user themselves.
         self.owner = self.email
         
+        # 3. Check if a User document exists for this email to handle re-registration.
         if frappe.db.exists("User", self.email):
-            # --- SCENARIO A: User exists (re-registering) ---
+            # --- SCENARIO A: User exists (they are re-registering) ---
             try:
                 user = frappe.get_doc("User", self.email)
                 user.first_name = self.host_name
                 user.enabled = 1
                 user.new_password = self.password
-                user.mobile_no = self.mobile 
-                # self.phone = self.mobile # <-- ADDED: Sync mobile number on update
+                user.mobile_no = self.mobile
                 
                 user.flags.ignore_permissions = True
                 user.save(ignore_permissions=True)
@@ -37,7 +40,7 @@ class HostDetails(Document):
                 frappe.throw(f"An error occurred while re-activating the user profile.")
         
         else:
-            # --- SCENARIO B: User does not exist (new registration) ---
+            # --- SCENARIO B: User does not exist (a truly new registration) ---
             try:
                 user = frappe.get_doc({
                     "doctype": "User",
@@ -48,9 +51,7 @@ class HostDetails(Document):
                     "send_welcome_email": 0,
                     "enabled": 1,
                     "new_password": self.password,
-                    "mobile_no": self.mobile ,
-                    # "phone" : self.mobile 
-                      # <-- ADDED: Sync mobile number on creation
+                    "mobile_no": self.mobile
                 })
                 
                 user.flags.ignore_permissions = True
@@ -65,8 +66,7 @@ class HostDetails(Document):
 
     def before_update(self):
         """
-        This hook prevents critical, linked fields from being changed
-        and syncs the mobile number if it's updated on the Host Details page.
+        Prevents critical, linked fields from being changed and syncs the mobile number if it's updated.
         """
         if self.has_value_changed("email"):
             frappe.throw("The email address cannot be changed after registration.", title="Update Not Allowed")
@@ -74,31 +74,20 @@ class HostDetails(Document):
         if self.has_value_changed("user_id"):
             frappe.throw("The linked User ID cannot be changed.", title="Update Not Allowed")
 
-        # Sync mobile number to User doctype if it changes
-        if self.has_value_changed("mobile") and self.user_id:
-            try:
-                frappe.db.set_value("User", self.user_id, "mobile_no", self.mobile)
-                # frappe.db.set_value("User", self.user_id, "phone", self.mobile)
-                
-                frappe.msgprint("Mobile number synced to User profile.", indicator="green")
-            except Exception as e:
-                frappe.log_error(f"Failed to sync mobile number for User {self.user_id}", "Host Details Update")
-
-
     def on_trash(self):
         """
-        This hook triggers right before the document is permanently deleted.
-        We will disable the linked Frappe User instead of deleting them.
+        Triggers before the document is deleted to disable the linked Frappe User.
         """
         if not self.user_id:
             return
 
         try:
             user_doc = frappe.get_doc("User", self.user_id)
-            user_doc.enabled = 0
-            user_doc.save(ignore_permissions=True)
-            frappe.db.commit()
-            frappe.msgprint(f"User {self.user_id} has been disabled.", indicator="orange")
+            if user_doc.enabled:
+                user_doc.enabled = 0
+                user_doc.save(ignore_permissions=True)
+                frappe.db.commit()
+                frappe.msgprint(f"User {self.user_id} has been disabled.", indicator="orange")
         except frappe.DoesNotExistError:
             frappe.log_error(f"User {self.user_id} not found during Host Details deletion.", "on_trash hook")
         except Exception as e:

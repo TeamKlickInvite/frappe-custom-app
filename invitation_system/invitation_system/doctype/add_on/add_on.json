@@ -1,13 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2025-06-10 15:29:30.088694",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "addon_name",
   "price",
-  "description"
+  "description",
+  "naming_series"
  ],
  "fields": [
   {
@@ -30,15 +32,22 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "AddOn-.YYYY.-.####"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-10 15:32:23.098164",
+ "modified": "2025-06-25 17:39:12.927727",
  "modified_by": "Administrator",
  "module": "Invitation System",
  "name": "Add-On",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

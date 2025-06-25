@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "GUEST-.####",
+ "autoname": "naming_series:",
  "creation": "2025-06-11 12:19:10.680843",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,6 +12,7 @@
   "address",
   "unique_url",
   "group",
+  "naming_series",
   "invite_statuses_section",
   "pi_status",
   "i_status",
@@ -87,16 +88,22 @@
    "fieldname": "view_count",
    "fieldtype": "Int",
    "label": "View Count"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "GUEST-.####"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-11 12:28:57.514644",
+ "modified": "2025-06-25 17:37:33.554357",
  "modified_by": "Administrator",
  "module": "Invitation System",
  "name": "Guest",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
