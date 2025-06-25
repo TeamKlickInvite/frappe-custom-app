@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-11 11:01:07.844162",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "celebrant_name",
+  "age"
+ ],
+ "fields": [
+  {
+   "fieldname": "celebrant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Celebrant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age",
+   "non_negative": 1,
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-11 11:45:22.613392",
+ "modified_by": "Administrator",
+ "module": "Invitation System",
+ "name": "Event Birthday Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

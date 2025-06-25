@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "GUEST-.####",
+ "creation": "2025-06-11 12:19:10.680843",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "guest_name",
+  "email",
+  "mobile",
+  "address",
+  "unique_url",
+  "group",
+  "invite_statuses_section",
+  "pi_status",
+  "i_status",
+  "t_status",
+  "view_count"
+ ],
+ "fields": [
+  {
+   "fieldname": "guest_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Guest Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "description": "Auto-generated unique URL for guest invite.",
+   "fieldname": "unique_url",
+   "fieldtype": "Data",
+   "label": "Unique URL"
+  },
+  {
+   "fieldname": "group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Group",
+   "options": "Group Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invite_statuses_section",
+   "fieldtype": "Section Break",
+   "label": "Invite Statuses",
+   "options": "Not Sent\nSent\nRead"
+  },
+  {
+   "default": "Not Sent",
+   "fieldname": "pi_status",
+   "fieldtype": "Select",
+   "label": "Pre-Invite Status",
+   "options": "Not Sent\nSent\nRead"
+  },
+  {
+   "default": "Not Sent",
+   "fieldname": "i_status",
+   "fieldtype": "Select",
+   "label": "Invite Status",
+   "options": "Not Sent\nSent\nRead"
+  },
+  {
+   "default": "Not Sent",
+   "fieldname": "t_status",
+   "fieldtype": "Select",
+   "label": "Thank-You Status",
+   "options": "Not Sent\nSent\nRead"
+  },
+  {
+   "default": "0",
+   "fieldname": "view_count",
+   "fieldtype": "Int",
+   "label": "View Count"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-11 12:28:57.514644",
+ "modified_by": "Administrator",
+ "module": "Invitation System",
+ "name": "Guest",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Host",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

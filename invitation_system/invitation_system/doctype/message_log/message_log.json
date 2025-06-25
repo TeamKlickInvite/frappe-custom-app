@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2025-06-11 12:38:14.563650",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "guest",
+  "messaging_template",
+  "sent_at",
+  "delivered_at",
+  "status",
+  "message_content_sent",
+  "medium"
+ ],
+ "fields": [
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Guest",
+   "options": "Guest",
+   "reqd": 1
+  },
+  {
+   "fieldname": "messaging_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Messaging Template",
+   "options": "Messaging Templates",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sent_at",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Sent At",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivered_at",
+   "fieldtype": "Datetime",
+   "label": "Delivered At"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nSent\nDelivered\nFailed\nRead",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message_content_sent",
+   "fieldtype": "Long Text",
+   "label": "Message Content Sent"
+  },
+  {
+   "fieldname": "medium",
+   "fieldtype": "Select",
+   "label": "Medium",
+   "options": "Email\nSMS\nWhatsApp"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-11 14:41:56.179528",
+ "modified_by": "Administrator",
+ "module": "Invitation System",
+ "name": "Message Log",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Host",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

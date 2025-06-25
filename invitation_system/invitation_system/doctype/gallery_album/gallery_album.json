@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-11 14:55:46.567513",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "album_name",
+  "event",
+  "created_at",
+  "pictures"
+ ],
+ "fields": [
+  {
+   "fieldname": "album_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Album Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event",
+   "options": "Events",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "created_at",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Created At",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pictures",
+   "fieldtype": "Table",
+   "label": "Pictures",
+   "options": "Gallery Picture"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-11 14:57:31.452744",
+ "modified_by": "Administrator",
+ "module": "Invitation System",
+ "name": "Gallery Album",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Host",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

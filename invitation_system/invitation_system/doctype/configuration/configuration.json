@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-10 15:33:35.168315",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_timezone",
+  "sms_gateway_settings_section",
+  "sms_gateway_url",
+  "sms_api_key",
+  "sms_sender_id",
+  "payment_gateway_settings_section",
+  "payment_gateway_api_url",
+  "payment_gateway_api_key",
+  "payment_gateway_secret"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_timezone",
+   "fieldtype": "Select",
+   "label": "Default Timezone",
+   "options": "UTC\nAsia/Kolkata\nAmerica/New_York"
+  },
+  {
+   "fieldname": "sms_gateway_settings_section",
+   "fieldtype": "Section Break",
+   "label": "SMS Gateway Settings"
+  },
+  {
+   "fieldname": "sms_gateway_url",
+   "fieldtype": "Data",
+   "label": "SMS Gateway URL"
+  },
+  {
+   "fieldname": "sms_api_key",
+   "fieldtype": "Password",
+   "label": "SMS API Key"
+  },
+  {
+   "fieldname": "sms_sender_id",
+   "fieldtype": "Data",
+   "label": "SMS Sender ID"
+  },
+  {
+   "fieldname": "payment_gateway_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Gateway Settings"
+  },
+  {
+   "fieldname": "payment_gateway_api_url",
+   "fieldtype": "Data",
+   "label": "Payment Gateway API URL"
+  },
+  {
+   "fieldname": "payment_gateway_api_key",
+   "fieldtype": "Password",
+   "label": "Payment Gateway API Key"
+  },
+  {
+   "fieldname": "payment_gateway_secret",
+   "fieldtype": "Password",
+   "label": "Payment Gateway Secret"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-06-10 15:56:47.348130",
+ "modified_by": "Administrator",
+ "module": "Invitation System",
+ "name": "Configuration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

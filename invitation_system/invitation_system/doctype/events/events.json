@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-11 11:32:39.012028",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "order",
+  "event_name",
+  "event_type",
+  "start_date",
+  "end_date",
+  "venue_address",
+  "event_type_details_section",
+  "wedding_details",
+  "birthday_details",
+  "anniversary_details",
+  "other_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Order",
+   "options": "Orders",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Event Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Event Type",
+   "options": "Wedding\nBirthday\nAnniversary\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "venue_address",
+   "fieldtype": "Text",
+   "label": "Venue Address"
+  },
+  {
+   "fieldname": "event_type_details_section",
+   "fieldtype": "Section Break",
+   "label": "Event Type Details"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Wedding'",
+   "fieldname": "wedding_details",
+   "fieldtype": "Table",
+   "label": "Wedding Details",
+   "options": "Event Wedding Details"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Birthday'",
+   "fieldname": "birthday_details",
+   "fieldtype": "Table",
+   "label": "Birthday Details",
+   "options": "Event Birthday Details"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Anniversary'",
+   "fieldname": "anniversary_details",
+   "fieldtype": "Table",
+   "label": "Anniversary Details",
+   "options": "Event Anniversary Details"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Other'",
+   "fieldname": "other_details",
+   "fieldtype": "Table",
+   "label": "Other Details",
+   "options": "Event Other Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-11 12:06:47.599864",
+ "modified_by": "Administrator",
+ "module": "Invitation System",
+ "name": "Events",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Host",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

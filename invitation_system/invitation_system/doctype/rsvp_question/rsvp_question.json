@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-11 11:51:50.738542",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "question_text",
+  "field_type",
+  "options"
+ ],
+ "fields": [
+  {
+   "fieldname": "question_text",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question Text",
+   "reqd": 1
+  },
+  {
+   "default": "Single Line",
+   "fieldname": "field_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Field Type",
+   "options": "Single Line\nMulti Line\nSelect",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.field_type == 'Select'",
+   "description": "Comma-separated options for Select field type",
+   "fieldname": "options",
+   "fieldtype": "Text",
+   "label": "Options"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-11 12:13:40.261979",
+ "modified_by": "Administrator",
+ "module": "Invitation System",
+ "name": "RSVP Question",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-11 10:59:59.789365",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "brides_name",
+  "grooms_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "brides_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bride's Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grooms_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Groom's Name\t",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-11 11:45:19.323673",
+ "modified_by": "Administrator",
+ "module": "Invitation System",
+ "name": "Event Wedding Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

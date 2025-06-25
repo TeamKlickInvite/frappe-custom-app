@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-10 14:32:31.718881",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "feature",
+  "has_access",
+  "read_only"
+ ],
+ "fields": [
+  {
+   "fieldname": "feature",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Feature",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "has_access",
+   "fieldtype": "Check",
+   "label": "Has Access\t"
+  },
+  {
+   "default": "0",
+   "fieldname": "read_only",
+   "fieldtype": "Check",
+   "label": "Read Only"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-10 14:53:17.160430",
+ "modified_by": "Administrator",
+ "module": "Invitation System",
+ "name": "Role Permission",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
