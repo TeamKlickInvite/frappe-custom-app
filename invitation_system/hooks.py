@@ -26,7 +26,9 @@ api_methods = [
     "invitation_system.api.update_host_profile"
 ]
 
-
+fixtures = [
+    "Base Packs"
+]
 # Note: You can add other hooks like doctype_events if needed, for example:
 # doctype_events = {
 # 	"Host Details": {

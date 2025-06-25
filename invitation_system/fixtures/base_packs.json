@@ -1,0 +1,174 @@
+[
+ {
+  "custom_button_label": "TRY FREE",
+  "custom_button_subtext": "No credit card required",
+  "custom_is_best_value": 0,
+  "custom_number_of_events": 1,
+  "custom_number_of_reminders": 0,
+  "custom_tagline": "Free Trial",
+  "docstatus": 0,
+  "doctype": "Base Packs",
+  "features": [
+   {
+    "description": null,
+    "feature_name": "Upto 10 Guests & 100 Views"
+   },
+   {
+    "description": null,
+    "feature_name": "Photo Gallery"
+   },
+   {
+    "description": null,
+    "feature_name": "Live Comments"
+   },
+   {
+    "description": null,
+    "feature_name": "Add Your own Video / E-Card"
+   },
+   {
+    "description": null,
+    "feature_name": "Send WhatsApp Invites"
+   },
+   {
+    "description": null,
+    "feature_name": "Email/WhatsApp Support"
+   }
+  ],
+  "max_guests": 10,
+  "modified": "2025-06-25 17:53:21.774269",
+  "name": "BP-2025-0001",
+  "naming_series": "BP-.YYYY.-.####",
+  "pack_name": "BASIC",
+  "price": 0.0
+ },
+ {
+  "custom_button_label": "GET STARTED",
+  "custom_button_subtext": "No credit card required",
+  "custom_is_best_value": 0,
+  "custom_number_of_events": 2,
+  "custom_number_of_reminders": 150,
+  "custom_tagline": "Just ₹4 per guest!",
+  "docstatus": 0,
+  "doctype": "Base Packs",
+  "features": [
+   {
+    "description": null,
+    "feature_name": "All Basic Features plus"
+   },
+   {
+    "description": null,
+    "feature_name": "Save The Date"
+   },
+   {
+    "description": null,
+    "feature_name": "Venue Map Link"
+   },
+   {
+    "description": null,
+    "feature_name": "RSVP"
+   },
+   {
+    "description": null,
+    "feature_name": "24 hours response time"
+   }
+  ],
+  "max_guests": 150,
+  "modified": "2025-06-25 17:56:03.758146",
+  "name": "BP-2025-0002",
+  "naming_series": "BP-.YYYY.-.####",
+  "pack_name": "PLUS",
+  "price": 599.0
+ },
+ {
+  "custom_button_label": "GET STARTED",
+  "custom_button_subtext": "No credit card required",
+  "custom_is_best_value": 1,
+  "custom_number_of_events": 5,
+  "custom_number_of_reminders": 300,
+  "custom_tagline": "< ₹ 10 per guest!",
+  "docstatus": 0,
+  "doctype": "Base Packs",
+  "features": [
+   {
+    "description": null,
+    "feature_name": "5 Events"
+   },
+   {
+    "description": null,
+    "feature_name": "Upto 500 Guests & 5000 views"
+   },
+   {
+    "description": null,
+    "feature_name": "300 Reminders"
+   },
+   {
+    "description": null,
+    "feature_name": "All Plus Features +"
+   },
+   {
+    "description": null,
+    "feature_name": "Driver Food Coupon"
+   },
+   {
+    "description": null,
+    "feature_name": "Free Personalised E-Card designed by our experts"
+   },
+   {
+    "description": null,
+    "feature_name": "Priority Email/WhatsApp Support"
+   },
+   {
+    "description": null,
+    "feature_name": "12 hours response time"
+   }
+  ],
+  "max_guests": 500,
+  "modified": "2025-06-25 17:58:44.786414",
+  "name": "BP-2025-0003",
+  "naming_series": "BP-.YYYY.-.####",
+  "pack_name": "PRO",
+  "price": 4999.0
+ },
+ {
+  "custom_button_label": "CONTACT US",
+  "custom_button_subtext": "No credit card required",
+  "custom_is_best_value": 0,
+  "custom_number_of_events": 6,
+  "custom_number_of_reminders": 0,
+  "custom_tagline": "For more than 500 users & all premium features",
+  "docstatus": 0,
+  "doctype": "Base Packs",
+  "features": [
+   {
+    "description": null,
+    "feature_name": "For more than 5 events or more than 500 guests "
+   },
+   {
+    "description": null,
+    "feature_name": "With Premium Features"
+   },
+   {
+    "description": null,
+    "feature_name": "Priority Phone Support | 12 hours response time"
+   },
+   {
+    "description": null,
+    "feature_name": "All Pro Features +"
+   },
+   {
+    "description": null,
+    "feature_name": "Premium Designer E-Card designed by world-class expers"
+   },
+   {
+    "description": null,
+    "feature_name": "Dedicated Account Manager"
+   }
+  ],
+  "max_guests": 501,
+  "modified": "2025-06-25 18:02:48.948942",
+  "name": "BP-2025-0004",
+  "naming_series": "BP-.YYYY.-.####",
+  "pack_name": "PREMIUM",
+  "price": 0.0
+ }
+]
