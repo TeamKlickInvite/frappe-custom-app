@@ -37,13 +37,13 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
-   "options": "AddOn-.YYYY.-.####"
+   "options": "ADDON-.YYYY.-.####"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-25 17:39:12.927727",
+ "modified": "2025-06-26 11:05:15.554847",
  "modified_by": "Administrator",
  "module": "Invitation System",
  "name": "Add-On",
@@ -61,6 +61,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Host",
+   "share": 1
   }
  ],
  "row_format": "Dynamic",
