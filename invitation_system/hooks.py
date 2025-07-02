@@ -19,16 +19,14 @@ app_license = "MIT"
 
 # Custom API Endpoints
 api_methods = [
-    "invitation_system.api.register_host",
-    "invitation_system.api.get_current_host_details",
-    "invitation_system.api.send_verification_otp",
-    "invitation_system.api.verify_host",
-    "invitation_system.api.update_host_profile"
+	"invitation_system.api.register_host",
+	"invitation_system.api.get_current_host_details",
+	"invitation_system.api.send_verification_otp",
+	"invitation_system.api.verify_host",
+	"invitation_system.api.update_host_profile",
 ]
 
-fixtures = [
-    "Base Packs"
-]
+fixtures = ["Base Packs"]
 # Note: You can add other hooks like doctype_events if needed, for example:
 # doctype_events = {
 # 	"Host Details": {
