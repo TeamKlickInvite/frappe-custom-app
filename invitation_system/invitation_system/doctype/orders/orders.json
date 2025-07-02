@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2025-06-10 16:00:48.494252",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,7 +9,8 @@
   "base_pack",
   "addons",
   "order_date",
-  "status"
+  "status",
+  "naming_series"
  ],
  "fields": [
   {
@@ -48,15 +49,22 @@
    "label": "Status",
    "options": "Draft\nConfirmed\nPaid\nCancelled",
    "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "INV-.YYYY.-.#####"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-26 11:00:50.956366",
+ "modified": "2025-07-01 12:59:39.715260",
  "modified_by": "Administrator",
  "module": "Invitation System",
  "name": "Orders",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

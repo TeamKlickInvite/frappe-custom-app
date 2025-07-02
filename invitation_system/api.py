@@ -134,7 +134,7 @@ def get_current_host_details():
             "email": host_doc.email,
             "mobile": host_doc.mobile,
             "is_verified": host_doc.is_verified,
-            "user_id": host_doc.user_id
+            "user_id": host_doc.name
         }
     except frappe.DoesNotExistError:
         frappe.throw("No Host Details record found for the current user.", frappe.NotFoundError)
